@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rgColor"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/llIzquierda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/llDerecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border"
+        android:padding="7dp"
+        android:layout_above="@+id/rgUbicacion">
+
+        <RadioButton
+            android:id="@+id/rbRojo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rojo"
+            android:checked="true">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rbVerde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verde">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rbAzul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Azul">
+
+        </RadioButton>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_above="@+id/btAnadir"
+        android:id="@+id/rgUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/border"
+        android:padding="7dp">
+        <RadioButton
+            android:id="@+id/rbIzquierda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Izquierda"
+            android:checked="true">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rbDerecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Derecha">
+
+        </RadioButton>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btAnadir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btReset"
+
+        android:text="Añadir"></Button>
+
+    <Button
+        android:id="@+id/btReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Reset"></Button>
+
+
+</RelativeLayout>
